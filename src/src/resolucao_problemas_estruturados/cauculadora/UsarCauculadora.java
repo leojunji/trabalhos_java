@@ -9,12 +9,6 @@ public class UsarCauculadora {
 
         while (true) {
 
-            System.out.println("Digite o primeiro valor(a): ");
-            float a = input.nextFloat();
-
-            System.out.println("Digite o segundo valor(b): ");
-            float b = input.nextFloat();
-
             System.out.println("Digite uma opção\n" +
                     "+ --> soma[1]\n" +
                     "- --> subtração[2]\n" +
@@ -27,15 +21,26 @@ public class UsarCauculadora {
 
             if (resp == 0) {
                 break;
-            } else if (resp == 1) {
-                System.out.println("Resultado: " + a + "+" + b + " = " +  Cauculadora.somar(a, b));
-            } else if (resp == 2) {
-                System.out.println("Resultado: " + a + "-" + b + " = " +  Cauculadora.subtrair(a, b));
-            } else if (resp == 3) {
-                System.out.println("Resultado: " + a + "*" + b + " = " +  Cauculadora.mutiplicar(a, b));
-            } else if (resp == 4) {
-                System.out.println("Resultado: " + a + "/" + b + " = " +  Cauculadora.dividir(a, b));
+            } else {
+
+                System.out.println("Digite o primeiro valor(a): ");
+                float a = input.nextFloat();
+
+                System.out.println("Digite o segundo valor(b): ");
+                float b = input.nextFloat();
+
+                if (resp == 1) {
+                    System.out.println("Resultado: " + a + "+" + b + " = " + Cauculadora.somar(a, b));
+                } else if (resp == 2) {
+                    System.out.println("Resultado: " + a + "-" + b + " = " + Cauculadora.subtrair(a, b));
+                } else if (resp == 3) {
+                    System.out.println("Resultado: " + a + "*" + b + " = " + Cauculadora.mutiplicar(a, b));
+                } else if (resp == 4) {
+                    System.out.println("Resultado: " + a + "/" + b + " = " + Cauculadora.dividir(a, b));
+                }
             }
+
+            System.out.println("-----------------");
         }
 
     }
